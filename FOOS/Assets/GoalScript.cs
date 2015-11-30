@@ -7,9 +7,11 @@ public class GoalScript : MonoBehaviour {
 	public int score;
 	public Text HUDElement;
 	public Text Win;
-	// Use this for initialization
-	void Start () {
+    AudioSource audio;
+    // Use this for initialization
+    void Start () {
 		score = 0;
+        audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -30,11 +32,13 @@ public class GoalScript : MonoBehaviour {
 		col.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
 		if (col.name == "Player1") {
 			col.transform.position = new Vector3 (0.0f, 1f, -8.0f);
+            audio.Play();
 			if(playernum == 1)score++;
 
 		} else {
 			col.transform.position = new Vector3 (0.0f, 1f, 8.0f);
-			if(playernum == 2)score++;
+            audio.Play();
+            if (playernum == 2)score++;
 		}
 		HUDElement.text = "Player " + playernum.ToString() + " Score: " + score.ToString();
 	}
