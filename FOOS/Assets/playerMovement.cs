@@ -17,22 +17,23 @@ public class playerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyUp("up")) {
+
+		if (Input.GetButtonDown("up")) {
 			if(sphere.velocity.z < 14)
 				sphere.AddForce(0, 0, 250);
 			audio.Play();
 		}
-		if (Input.GetKeyUp ("down")) {
+		if (Input.GetButtonDown ("down")) {
 			if(sphere.velocity.z > -14)
 				sphere.AddForce(0, 0, -250);
 			audio.Play();
 		}
-		if (Input.GetKeyUp ("left")) {
+		if (Input.GetButtonDown ("left")) {
 			if(sphere.velocity.x > -14)
 				sphere.AddForce(-250, 0, 0);
 			audio.Play();
 		}
-		if (Input.GetKeyUp ("right")) {
+		if (Input.GetButtonDown ("right")) {
 			if(sphere.velocity.x < 14)
 				sphere.AddForce(250, 0, 0);
 			audio.Play();
