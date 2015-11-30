@@ -281,7 +281,7 @@ GameObject:
   - 114: {fileID: 310034858}
   - 114: {fileID: 310034857}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SplashText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Kick the ball into the other players goal. \nUse the analog sticks.\nDon't
+  m_Text: "Kick the ball into the other players goal. \nUse the XYBA buttons.\nDon't
     fall off the map."
 --- !u!222 &310034859
 CanvasRenderer:
@@ -1860,7 +1860,7 @@ GameObject:
   - 23: {fileID: 1745025144}
   - 114: {fileID: 1745025143}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: SplashBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
