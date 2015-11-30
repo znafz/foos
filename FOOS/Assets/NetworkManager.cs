@@ -56,11 +56,15 @@ public class NetworkManager : MonoBehaviour
         GameObject foo;
         if (Network.isClient)
         {
-            Network.Instantiate(player2, new Vector3(0, 1, -8), Quaternion.identity, 0);
+            Network.Instantiate(player2, new Vector3(0, 1, 8), Quaternion.identity, 0);
+            GameObject p1 = GameObject.Find("Player1(Clone");
+            p1.transform.position = new Vector3(0, 1, -8);
+            p1.transform.rotation = Quaternion.identity;
         }
         else
         {
-            Network.Instantiate(player1, new Vector3(0, 1, 8), Quaternion.identity, 0);
+
+            Network.Instantiate(player1, new Vector3(0, 1, -8), Quaternion.identity, 0);
         }
     }
 

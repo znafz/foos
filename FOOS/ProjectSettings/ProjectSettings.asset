@@ -39,7 +39,7 @@ PlayerSettings:
   disableDepthAndStencilBuffers: 0
   defaultIsFullScreen: 1
   defaultIsNativeResolution: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   Override IPod Music: 0
   Prepare IOS For Recording: 0
@@ -161,7 +161,13 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 0}
+      m_Width: 128
+      m_Height: 128
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   webPlayerTemplate: APPLICATION:Default
@@ -263,7 +269,18 @@ PlayerSettings:
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
   ps4attribShareSupport: 0
-  ps4IncludedModules: []
+  ps4IncludedModules:
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libc.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceAudioLatencyEstimation.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceFace.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceFaceTracker.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceFios2.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceHand.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceHandTracker.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceHeadTracker.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceNpToolkit.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceS3DConversion.prx
+  - C:\Program Files (x86)\SCE\ORBIS SDKs\3.000\target\sce_module\libSceSmart.prx
   monoEnv: 
   psp2Splashimage: {fileID: 0}
   psp2NPTrophyPackPath: 

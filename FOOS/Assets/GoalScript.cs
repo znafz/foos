@@ -37,7 +37,7 @@ public class GoalScript : MonoBehaviour {
 
 		col.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		col.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
-		if (col.name == "Player1") {
+		if (col.name == "Player1" || col.name == "Player1(Clone)") {
 			col.transform.position = new Vector3 (0.0f, 1f, -8.0f);
             audio.Play();
 			if(playernum == 1)score++;
