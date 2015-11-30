@@ -10,6 +10,7 @@ public class NetworkManager : MonoBehaviour
     private HostData[] hostData;
     public GameObject player1;
     public GameObject player2;
+    public GameObject movingWall;
     GUIStyle customButtonStyle;
     public bool useAWSserver = false;
     public string AWS_URL;
@@ -56,6 +57,7 @@ public class NetworkManager : MonoBehaviour
         GameObject foo;
         if (Network.isClient)
         {
+            Network.Instantiate(movingWall, new Vector3(0, 0.8f, 0), Quaternion.identity, 0);
             Network.Instantiate(player2, new Vector3(0, 1, 8), Quaternion.identity, 0);
             GameObject p1 = GameObject.Find("Player1(Clone");
             p1.transform.position = new Vector3(0, 1, -8);
@@ -99,7 +101,7 @@ public class NetworkManager : MonoBehaviour
         }
         if (!Network.isClient && !Network.isServer)
         {
-            GUILayout.BeginArea(new Rect(Screen.width * .05f, Screen.height * .05f, Screen.width * 0.1f, Screen.height * 0.1f));
+            GUILayout.BeginArea(new Rect(Screen.width * .05f, Screen.height * .05f, Screen.width * 0.2f, Screen.height * 0.2f));
             if (GUILayout.Button("Start Server", customButtonStyle))
             {
                 Debug.Log("Starting Server");
