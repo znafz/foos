@@ -7,17 +7,23 @@ public class GoalScript : MonoBehaviour {
 	public int score;
 	public Text HUDElement;
 	public Text Win;
+    private float timer;
 	// Use this for initialization
 	void Start () {
 		score = 0;
+        timer = 0.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        
 		if (score >= 5) {
 			Win.text = "Player " + playernum.ToString() + " Wins!";
 		}
-		HUDElement.text = "Player " + playernum.ToString() + " Score: " + score.ToString();
+        if (timer >= 3.0f)
+            HUDElement.text = "Player " + playernum.ToString() + " Score: " + score.ToString();
+        else HUDElement.text = "";
+        timer += Time.deltaTime;
 	}
 
 	public void ModifyText(){
